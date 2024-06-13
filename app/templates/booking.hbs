@@ -1,0 +1,6 @@
+<h1>{{@model.activity.name}}</h1>
+<h3>{{@model.activity.description}}</h3>
+
+{{#each @model.activity.tickets as |ticket|}}
+  <Ticket @ticket={{ticket}} />
+{{/each}}
