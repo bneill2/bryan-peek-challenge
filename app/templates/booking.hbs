@@ -4,3 +4,5 @@
 {{#each @model.activity.tickets as |ticket|}}
   <Ticket @ticket={{ticket}} />
 {{/each}}
+
+<Calendar class="calendar" @availability={{@model.availability}} />

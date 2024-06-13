@@ -5,7 +5,7 @@ export default class BookingRoute extends Route {
   async model() {
     return {
       activity: bookingData.activity,
-      availabilityDates: bookingData.availabilityDates,
+      availability: bookingData.availabilityDates,
     };
   }
 }

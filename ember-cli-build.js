@@ -2,10 +2,14 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function (defaults) {
-  const app = new EmberApp(defaults, {
-    // Add options here
+module.exports = function () {
+  let app = new EmberApp({
+    sassOptions: {
+      extension: 'scss',
+      includePaths: ['node_modules/ember-power-calendar/'],
+    },
   });
 
+  //...
   return app.toTree();
 };

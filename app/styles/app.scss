@@ -1,0 +1,5 @@
+@import "ember-power-calendar";
+
+.calendar {
+  @include ember-power-calendar($cell-size: 50px);
+}
