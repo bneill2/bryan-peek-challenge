@@ -35,7 +35,7 @@ module('Acceptance | peek booking challenge', function (hooks) {
       ],
       availabilityDates: [
         {
-          date: '2024-06-01',
+          date: '2024-07-01',
           status: 'AVAILABLE',
           availabilityTimes: [
             {
@@ -63,12 +63,6 @@ module('Acceptance | peek booking challenge', function (hooks) {
     await visit('/booking');
     assert.strictEqual(currentURL(), '/booking');
 
-    assert.dom('.ticket-item').exists({ count: this.tickets.length });
-
-    await click(
-      '.ticket-item:first-child .counter-container button:nth-of-type(2)'
-    );
-
     await calendarSelect(
       '.calendar',
       new Date(this.availabilityDates[0].date + 'T00:00:00')
@@ -79,6 +73,12 @@ module('Acceptance | peek booking challenge', function (hooks) {
     });
 
     await click('.time button:nth-of-type(2)');
+
+    assert.dom('.ticket-item').exists({ count: this.tickets.length });
+
+    await click(
+      '.ticket-item:first-child .counter-container button:nth-of-type(2)'
+    );
 
     await click('.button.bookNow');
 
@@ -95,11 +95,11 @@ module('Acceptance | peek booking challenge', function (hooks) {
     assert.dom('.confirmation-tickets').exists();
     assert
       .dom('.confirmation-tickets > p:first-child')
-      .hasText(`${this.tickets[0].name} x1 10`);
+      .hasText(`${this.tickets[0].name} x1 $10`);
     assert
       .dom('.confirmation-tickets > p:last-of-type')
-      .hasText(`${this.tickets[1].name} x0 0`);
+      .hasText(`${this.tickets[1].name} x0 $0`);
     assert.dom('h4:nth-of-type(4)').hasText('Total:');
-    assert.dom('.confirmation-total').hasText('10');
+    assert.dom('.confirmation-total').hasText('$10');
   });
 });

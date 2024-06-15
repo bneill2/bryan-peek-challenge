@@ -17,17 +17,44 @@ module('Integration | Component | ticket', function (hooks) {
           formatted: '$10.00',
         },
       },
+      availabilityDates: [
+        {
+          date: '2024-06-01',
+          status: 'AVAILABLE',
+          availabilityTimes: [
+            {
+              time: '8:00 AM',
+              spotsLeft: 8,
+              status: 'AVAILABLE',
+            },
+            {
+              time: '12:00 PM',
+              spotsLeft: 8,
+              status: 'AVAILABLE',
+            },
+            {
+              time: '3:00 PM',
+              spotsLeft: 8,
+              status: 'AVAILABLE',
+            },
+          ],
+        },
+      ],
     });
 
     let store = this.owner.lookup('service:store');
     this.booking = store.createRecord('booking', {
       id: 'booking_1',
+      date: '2024-06-01',
+      time: '8:00 AM',
       tickets: [],
     });
   });
 
   test('displays ticket information', async function (assert) {
-    await render(hbs`<Ticket @ticket={{this.ticket}}/>`);
+    await render(
+      hbs`<Ticket @ticket={{this.ticket}} @availability={{this.availabilityDates}}/>`
+    );
 
     assert.dom('.ticket-name').hasText(this.ticket.name);
     assert
@@ -36,7 +63,9 @@ module('Integration | Component | ticket', function (hooks) {
   });
 
   test('increase qty', async function (assert) {
-    await render(hbs`<Ticket @ticket={{this.ticket}}/>`);
+    await render(
+      hbs`<Ticket @ticket={{this.ticket}} @availability={{this.availabilityDates}}/>`
+    );
 
     assert.dom('.ticket-qty').hasText('0');
 
@@ -53,7 +82,9 @@ module('Integration | Component | ticket', function (hooks) {
   });
 
   test('decrease qty', async function (assert) {
-    await render(hbs`<Ticket @ticket={{this.ticket}}/>`);
+    await render(
+      hbs`<Ticket @ticket={{this.ticket}} @availability={{this.availabilityDates}}/>`
+    );
 
     assert.dom('.ticket-qty').hasText('0');
 
@@ -71,7 +102,9 @@ module('Integration | Component | ticket', function (hooks) {
   });
 
   test('decrease qty 0', async function (assert) {
-    await render(hbs`<Ticket @ticket={{this.ticket}}/>`);
+    await render(
+      hbs`<Ticket @ticket={{this.ticket}} @availability={{this.availabilityDates}}/>`
+    );
 
     assert.dom('.ticket-qty').hasText('0');
 
