@@ -8,8 +8,6 @@ export default class GuestInfoComponent extends Component {
 
   @tracked booking = this.store.peekRecord('booking', 'booking_1');
 
-  @tracked disabled = this.booking.tickets.length === 0;
-
   @tracked invalidEmail = false;
   @tracked invalidPhone = false;
 

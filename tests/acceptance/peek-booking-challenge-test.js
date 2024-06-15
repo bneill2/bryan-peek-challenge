@@ -57,6 +57,11 @@ module('Acceptance | peek booking challenge', function (hooks) {
         },
       ],
     });
+    let store = this.owner.lookup('service:store');
+    this.booking = store.createRecord('booking', {
+      id: 'booking_2',
+      reservationStatus: 'DRAFT',
+    });
   });
 
   test('create booking', async function (assert) {
