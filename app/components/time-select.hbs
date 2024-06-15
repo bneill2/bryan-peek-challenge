@@ -6,7 +6,8 @@
       <button
         type="button"
         class="button timeSelect
-          {{if (eq this.booking.time time.time) 'selected'}}"
+          {{if (eq this.booking.time time.time) 'selected'}}
+          {{if (eq time.status 'SOLD_OUT') 'disabled'}}"
         {{on "click" (fn this.selectTime time.time)}}
       >{{time.time}}</button>
     {{/each}}

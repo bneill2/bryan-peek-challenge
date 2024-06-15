@@ -9,13 +9,22 @@ export default class TicketComponent extends Component {
 
   @tracked qty = 0;
 
+  get ticketsAvailable() {
+    return this.args.availability
+      .find((date) => date.date === this.booking.date)
+      .availabilityTimes.find((time) => time.time === this.booking.time)
+      .spotsLeft;
+  }
+
   @action increaseQty() {
     let ticketId = this.args.ticket.id;
-    this.qty++;
-    this.booking.tickets.push({
-      id: ticketId,
-      reservationStatus: 'CONFIRMED',
-    });
+    if (this.booking.tickets.length < this.ticketsAvailable) {
+      this.qty++;
+      this.booking.tickets.push({
+        id: ticketId,
+        reservationStatus: 'CONFIRMED',
+      });
+    }
   }
 
   @action decreaseQty() {
@@ -25,6 +34,7 @@ export default class TicketComponent extends Component {
     const index = this.booking.tickets.findIndex(
       (ticket) => ticket.id === ticketId
     );
+    console.log(index);
     index !== -1 ? this.booking.tickets.splice(index, 1) : null;
   }
 }

@@ -37,7 +37,9 @@ export default class CalendarComponent extends Component {
   }
 
   get minDate() {
-    return this.availableDates[0];
+    return this.availableDates.find(
+      (date) => new Date(date + 'T00:00:00') >= new Date().setHours(0, 0, 0, 0)
+    );
   }
 
   get maxDate() {

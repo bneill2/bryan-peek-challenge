@@ -19,11 +19,17 @@ html {
     padding: 1.5rem;
     background-color: #f5f5f5;
     border-radius: 6px;
+    margin-bottom: 2rem;
+
     .ticket-item {
       display: flex;
       flex-direction: row;
       align-items: center;
       width: 100%;
+      &.disabled {
+        opacity: 0.25;
+        pointer-events: none;
+      }
 
       &:last-child {
         margin-top: 1rem;
@@ -132,10 +138,13 @@ html {
     &:hover {
       background-color: darken(lightgreen, 10%);
     }
+  }
 
-    &.disabled {
+  &.disabled {
+    background-color: lightgrey;
+    opacity: 0.8;
+    &:hover {
       background-color: lightgrey;
-      cursor: not-allowed;
     }
   }
 }
