@@ -18,9 +18,9 @@
 
 const activity = {
   id: 'activity_1',
-  name: 'Awesome Walking Tour',
+  name: 'Crystal Springs Kayaking',
   description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    "Experience the serene beauty of Crystal Springs, Florida, with our guided kayaking tours. Paddle through crystal-clear waters surrounded by lush greenery and diverse wildlife. Whether you're a seasoned kayaker or a beginner, our tours offer a perfect blend of adventure and tranquility. Enjoy the peaceful environment, spot manatees, and immerse yourself in nature's splendor. Book your kayaking adventure today for an unforgettable outdoor experience!",
   tickets: [
     {
       id: 'ticket_1',
