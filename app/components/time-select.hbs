@@ -1,0 +1,18 @@
+<div ...attributes>
+
+  {{#if this.booking.date}}
+
+    {{#each this.availableTimes as |time|}}
+      <button
+        type="button"
+        class="button timeSelect
+          {{if (eq this.booking.time time.time) 'selected'}}"
+        {{on "click" (fn this.selectTime time.time)}}
+      >{{time.time}}</button>
+    {{/each}}
+
+  {{else}}
+    <p>No Date Selected</p>
+  {{/if}}
+
+</div>

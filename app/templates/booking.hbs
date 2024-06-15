@@ -1,8 +1,21 @@
-<h1>{{@model.activity.name}}</h1>
-<h3>{{@model.activity.description}}</h3>
+<div class="container">
 
-{{#each @model.activity.tickets as |ticket|}}
-  <Ticket @ticket={{ticket}} />
-{{/each}}
+  <h1>{{@model.activity.name}}</h1>
+  <h3>{{@model.activity.description}}</h3>
 
-<Calendar class="calendar" @availability={{@model.availability}} />
+  <div class="tickets">
+    {{#each @model.activity.tickets as |ticket|}}
+      <Ticket @ticket={{ticket}} class="ticket-item" />
+    {{/each}}
+  </div>
+
+  <div class="dateTime">
+    <Calendar
+      class="calendar-container"
+      @availability={{@model.availability}}
+    />
+    <TimeSelect class="time" @availability={{@model.availability}} />
+  </div>
+
+  <LinkTo class="button bookNow" @route="confirmation">Book Now</LinkTo>
+</div>

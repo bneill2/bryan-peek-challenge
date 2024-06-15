@@ -1,8 +1,21 @@
-<div>{{@ticket.name}}</div>
-<div>
-  {{@ticket.price.formatted}}
-  {{@ticket.price.currency}}
+<div ...attributes>
+  <div class="ticket-name">{{@ticket.name}}</div>
+  <div class="ticket-price">
+    {{@ticket.price.formatted}}
+    {{@ticket.price.currency}}
+  </div>
+  <div class="counter-container">
+    <button
+      type="button"
+      class="button small"
+      {{on "click" this.decreaseQty}}
+    >-</button>
+    <div class="ticket-qty">{{this.qty}}</div>
+    <button
+      type="button"
+      class="button small"
+      {{on "click" this.increaseQty}}
+    >+</button>
+  </div>
+
 </div>
-<button type="button" {{on "click" this.increaseQty}}>+</button>
-<div>{{this.qty}}</div>
-<button type="button" {{on "click" this.decreaseQty}}>-</button>
