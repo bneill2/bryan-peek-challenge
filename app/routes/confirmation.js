@@ -4,6 +4,7 @@ import bookingData from '../booking_flow_data';
 
 export default class ConfirmationRoute extends Route {
   @service store;
+  @service router;
 
   async model() {
     return {
@@ -14,7 +15,7 @@ export default class ConfirmationRoute extends Route {
 
   afterModel(model) {
     if (!model.booking) {
-      this.transitionTo('booking');
+      this.router.transitionTo('booking');
     }
   }
 }
