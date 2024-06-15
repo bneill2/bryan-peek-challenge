@@ -9,21 +9,24 @@ export default class BookingRoute extends Route {
     return {
       activity: bookingData.activity,
       availability: bookingData.availabilityDates,
+      bookingData: this.store.peekRecord('booking', 'booking_1'),
     };
   }
 
   async afterModel(model) {
-    // Create a new booking record in the ember-data store
-    this.store.createRecord('booking', {
-      id: 'booking_1',
-      activityId: model.activity.id,
-      reservationStatus: 'DRAFT',
-      tickets: [],
-      primaryGuest: {
-        name: '',
-        email: '',
-        phone: '',
-      },
-    });
+    if (!model.bookingData) {
+      // Create a new booking record in the ember-data store
+      this.store.createRecord('booking', {
+        id: 'booking_1',
+        activityId: model.activity.id,
+        reservationStatus: 'DRAFT',
+        tickets: [],
+        primaryGuest: {
+          name: '',
+          email: '',
+          phone: '',
+        },
+      });
+    }
   }
 }

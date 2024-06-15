@@ -1,13 +1,19 @@
 import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
 export default class BookingDetailsComponent extends Component {
-  // get date() {
-  //   return this.args.booking.date;
-  // }
+  @tracked booking = this.args.booking;
+  @tracked activity = this.args.activity;
+
+  get date() {
+    const dateParts = this.booking.date.split('-');
+    const formattedDate = `${dateParts[1]}/${dateParts[2]}/${dateParts[0]}`;
+    return formattedDate;
+  }
 
   get tickets() {
     let qty = [];
-    this.args.activity.tickets.forEach((ticket) => {
+    this.activity.tickets.forEach((ticket) => {
       qty.push({
         id: ticket.id,
         name: ticket.name,
@@ -18,14 +24,13 @@ export default class BookingDetailsComponent extends Component {
       });
     });
 
-    this.args.booking.tickets.forEach((ticket) => {
+    this.booking.tickets.forEach((ticket) => {
       let matchingId = qty.find((item) => item.id === ticket.id);
       if (matchingId) {
         matchingId.qty++;
-        matchingId.total = matchingId.qty * matchingId.amount;
+        matchingId.total = (matchingId.qty * matchingId.amount).toFixed(2);
       }
     });
-    console.log(qty);
 
     return qty;
   }
@@ -36,6 +41,6 @@ export default class BookingDetailsComponent extends Component {
       total += ticket.qty * ticket.amount;
     });
 
-    return total;
+    return total.toFixed(2);
   }
 }
