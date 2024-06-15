@@ -8,8 +8,8 @@
   {{#each this.tickets as |ticket|}}
     <p>{{ticket.name}}
       x{{ticket.qty}}
-      {{ticket.total}}</p>
+      ${{ticket.total}}</p>
   {{/each}}
 </div>
 <h4>Total: </h4>
-<p class="confirmation-total">{{this.totalPurchase}}</p>
+<p class="confirmation-total">${{this.totalPurchase}}</p>
