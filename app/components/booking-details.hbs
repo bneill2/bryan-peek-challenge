@@ -1,0 +1,15 @@
+<h3>{{@model.activity.name}}</h3>
+<h4>Date:</h4>
+<p class="confirmation-date">{{@booking.date}}</p>
+<h4>Time:</h4>
+<p class="confirmation-time">{{@booking.time}}</p>
+<h4>Tickets: </h4>
+<div class="confirmation-tickets">
+  {{#each this.tickets as |ticket|}}
+    <p>{{ticket.name}}
+      x{{ticket.qty}}
+      {{ticket.total}}</p>
+  {{/each}}
+</div>
+<h4>Total: </h4>
+<p class="confirmation-total">{{this.totalPurchase}}</p>

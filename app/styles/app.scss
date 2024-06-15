@@ -1,0 +1,141 @@
+@import "ember-power-calendar";
+
+html {
+  font-family: arial;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem 5rem;
+
+  .tickets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 1.5rem;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    .ticket-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+
+      &:last-child {
+        margin-top: 1rem;
+      }
+
+      .ticket-name {
+        width: 30%;
+      }
+
+      .ticket-price {
+        width: 30%;
+      }
+
+      .counter-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 40%;
+
+        div {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }
+
+  .dateTime {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    width: 60%;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin: 2rem 0;
+
+    .calendar {
+      @include ember-power-calendar(
+        $cell-size: 50px,
+        $primary-color: lightblue
+      );
+      background-color: white;
+    }
+
+    .time {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      margin-left: 1.5rem;
+      height: 23rem;
+      overflow: auto;
+
+      p {
+        font-size: 1.25rem;
+      }
+
+      .button {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: yellow;
+  border: black solid 1px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-style: bold;
+  font-size: 1.25rem;
+
+  &:hover,
+  &.selected {
+    background-color: darken(yellow, 10%);
+  }
+
+  &.small {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &.timeSelect {
+    background-color: lightblue;
+    width: 17rem;
+    height: 3rem;
+    &:hover,
+    &.selected {
+      background-color: darken(lightblue, 15%);
+    }
+  }
+
+  &.bookNow {
+    text-decoration: none;
+    color: black;
+    background-color: lightgreen;
+    width: 20rem;
+    height: 3rem;
+    &:hover {
+      background-color: darken(lightgreen, 10%);
+    }
+
+    &.disabled {
+      background-color: lightgrey;
+      cursor: not-allowed;
+    }
+  }
+}

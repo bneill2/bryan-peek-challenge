@@ -1,0 +1,18 @@
+<div ...attributes>
+  <PowerCalendar
+    class="calendar"
+    @center={{this.center}}
+    @selected={{this.selected}}
+    @onCenterChange={{this.onCenterChange}}
+    @onSelect={{this.onSelect}}
+    @highlighted={{this.availableDates}}
+    as |calendar|
+  >
+    <calendar.Nav />
+    <calendar.Days
+      @disabledDates={{this.soldOutDates}}
+      @minDate={{this.minDate}}
+      @maxDate={{this.maxDate}}
+    />
+  </PowerCalendar>
+</div>
