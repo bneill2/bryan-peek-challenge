@@ -132,10 +132,14 @@ html {
     &:hover {
       background-color: darken(lightgreen, 10%);
     }
+  }
 
-    &.disabled {
+  &.disabled {
+    background-color: lightgrey;
+    opacity: 0.8;
+    cursor: not-allowed;
+    &:hover {
       background-color: lightgrey;
-      cursor: not-allowed;
     }
   }
 }
