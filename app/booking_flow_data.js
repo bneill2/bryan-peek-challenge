@@ -18,9 +18,9 @@
 
 const activity = {
   id: 'activity_1',
-  name: 'Awesome Walking Tour',
+  name: 'Kayaking Tour in Crystal Springs, Florida',
   description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    "Experience the serene beauty of Crystal Springs, Florida, with our guided kayaking tours. Paddle through crystal-clear waters surrounded by lush greenery and diverse wildlife. Whether you're a seasoned kayaker or a beginner, our tours offer a perfect blend of adventure and tranquility. Enjoy the peaceful environment, spot manatees, and immerse yourself in nature's splendor. Book your kayaking adventure today for an unforgettable outdoor experience!",
   tickets: [
     {
       id: 'ticket_1',
@@ -183,6 +183,573 @@ const availabilityDates = [
   },
   {
     date: '2024-06-07',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-08',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-09',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-10',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-11',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-12',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-13',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-14',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-15',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-16',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-17',
+    status: 'SOLD_OUT',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-18',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-19',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-20',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-21',
+    status: 'SOLD_OUT',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-22',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-23',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-24',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-25',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-26',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-27',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-28',
+    status: 'SOLD_OUT',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-29',
+    status: 'SOLD_OUT',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-06-30',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-07-01',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-07-02',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-07-03',
+    status: 'AVAILABLE',
+    availabilityTimes: [
+      {
+        time: '8:00 AM',
+        spotsLeft: 6,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '12:00 PM',
+        spotsLeft: 2,
+        status: 'AVAILABLE',
+      },
+      {
+        time: '3:00 PM',
+        spotsLeft: 1,
+        status: 'AVAILABLE',
+      },
+    ],
+  },
+  {
+    date: '2024-07-04',
     status: 'AVAILABLE',
     availabilityTimes: [
       {
