@@ -34,7 +34,6 @@ export default class TicketComponent extends Component {
     const index = this.booking.tickets.findIndex(
       (ticket) => ticket.id === ticketId
     );
-    console.log(index);
     index !== -1 ? this.booking.tickets.splice(index, 1) : null;
   }
 }

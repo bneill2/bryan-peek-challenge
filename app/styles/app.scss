@@ -4,6 +4,18 @@ html {
   font-family: arial;
 }
 
+.disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.container-row {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -15,21 +27,16 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: 40%;
     padding: 1.5rem;
     background-color: #f5f5f5;
     border-radius: 6px;
-    margin-bottom: 2rem;
 
     .ticket-item {
       display: flex;
       flex-direction: row;
       align-items: center;
       width: 100%;
-      &.disabled {
-        opacity: 0.25;
-        pointer-events: none;
-      }
 
       &:last-child {
         margin-top: 1rem;
@@ -97,6 +104,45 @@ html {
   }
 }
 
+.guestInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  padding: 1.5rem;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+
+  label {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
+    width: 80%;
+
+    &.error {
+      span {
+        color: red;
+      }
+      input {
+        border: red solid 1px;
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  width: 100%;
+  height: 5rem;
+  position: sticky;
+  bottom: 0;
+}
+
 .button {
   display: flex;
   justify-content: center;
@@ -127,6 +173,14 @@ html {
     &.selected {
       background-color: darken(lightblue, 15%);
     }
+
+    &.disabled {
+      background-color: lightgrey;
+      opacity: 0.8;
+      &:hover {
+        background-color: lightgrey;
+      }
+    }
   }
 
   &.bookNow {
@@ -137,14 +191,6 @@ html {
     height: 3rem;
     &:hover {
       background-color: darken(lightgreen, 10%);
-    }
-  }
-
-  &.disabled {
-    background-color: lightgrey;
-    opacity: 0.8;
-    &:hover {
-      background-color: lightgrey;
     }
   }
 }

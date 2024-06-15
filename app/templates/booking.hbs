@@ -11,15 +11,19 @@
     <TimeSelect class="time" @availability={{@model.availability}} />
   </div>
 
-  <div class="tickets">
-    {{#each @model.activity.tickets as |ticket|}}
-      <Ticket
-        @ticket={{ticket}}
-        @availability={{@model.availability}}
-        class="ticket-item"
-      />
-    {{/each}}
+  <div class="container-row">
+    <div class="tickets">
+      {{#each @model.activity.tickets as |ticket|}}
+        <Ticket
+          @ticket={{ticket}}
+          @availability={{@model.availability}}
+          class="ticket-item"
+        />
+      {{/each}}
+    </div>
+    <GuestInfo class="guestInfo" />
   </div>
 
-  <LinkTo class="button bookNow" @route="confirmation">Book Now</LinkTo>
+  <BookingButton />
+
 </div>

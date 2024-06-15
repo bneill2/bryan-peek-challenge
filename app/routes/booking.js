@@ -19,6 +19,11 @@ export default class BookingRoute extends Route {
       activityId: model.activity.id,
       reservationStatus: 'DRAFT',
       tickets: [],
+      primaryGuest: {
+        name: '',
+        email: '',
+        phone: '',
+      },
     });
   }
 }

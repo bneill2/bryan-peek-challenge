@@ -1,0 +1,14 @@
+<div ...attributes>
+  <label>
+    <span>Name:</span>
+    <Input {{on "input" this.updateName}} placeholder="Joe Smith" />
+  </label>
+  <label class={{if this.invalidEmail "error"}}>
+    <span>Email:</span>
+    <Input {{on "input" this.validateEmail}} placeholder="example@peek.com" />
+  </label>
+  <label class={{if this.invalidPhone "error"}}>
+    <span>Phone:</span>
+    <Input {{on "input" this.validatePhone}} placeholder="555-555-5555" />
+  </label>
+</div>
