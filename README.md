@@ -15,11 +15,15 @@ This challenge implements a simple booking flow for an activity using Ember.js. 
 
 ## Notes
 
--Used Ember 4.12 due to it being the latest LTS version.
--Tried to make the flow as intuitive as possible, ie: disabling the ticket component until a time is selected.
--Utilized ember-power-calendar for date availability display. Set minimum date to currentDay despite mock data having available days in the past (added new dates).
--Since we're only dealing with one booking, didnt use queryParams. If we were to build on this we would not want to hardcode booking_ids
--Included acceptance and integration tests for core requirements
+- Used Ember 4.12 due to it being the latest LTS version.
+
+- Tried to make the flow as intuitive as possible, ie: disabling the ticket component until a time is selected.
+
+- Utilized ember-power-calendar for date availability display. Set minimum date to currentDay despite mock data having available days in the past (added new dates).
+
+- Since we're only dealing with one booking, didnt use queryParams. If we were to build on this we would not want to hardcode booking_ids
+
+- Included acceptance and integration tests for core requirements
 
 ## How to Run the Project
 
