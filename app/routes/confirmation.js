@@ -11,4 +11,10 @@ export default class ConfirmationRoute extends Route {
       booking: this.store.peekRecord('booking', 'booking_1'),
     };
   }
+
+  afterModel(model) {
+    if (!model.booking) {
+      this.transitionTo('booking');
+    }
+  }
 }

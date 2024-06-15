@@ -1,15 +1,42 @@
-<h3>{{@model.activity.name}}</h3>
-<h4>Date:</h4>
-<p class="confirmation-date">{{@booking.date}}</p>
-<h4>Time:</h4>
-<p class="confirmation-time">{{@booking.time}}</p>
-<h4>Tickets: </h4>
-<div class="confirmation-tickets">
-  {{#each this.tickets as |ticket|}}
-    <p>{{ticket.name}}
-      x{{ticket.qty}}
-      ${{ticket.total}}</p>
-  {{/each}}
+<div ...attributes>
+  <div class="confirmation-item highlight blue">
+    <h3>{{@activity.name}}</h3>
+  </div>
+  <div class="confirmation-item">
+    <h4>Name:</h4>
+    <p>{{this.booking.primaryGuest.name}}</p>
+  </div>
+  <div class="confirmation-item">
+    <h4>Email:</h4>
+    <p>{{this.booking.primaryGuest.email}}</p>
+  </div>
+  <div class="confirmation-item">
+    <h4>Phone:</h4>
+    <p>{{this.booking.primaryGuest.phone}}</p>
+  </div>
+  <div class="confirmation-item">
+    <h4>Date:</h4>
+    <p class="confirmation-date">{{this.date}}</p>
+  </div>
+  <div class="confirmation-item">
+    <h4>Time:</h4>
+    <p class="confirmation-time">{{@booking.time}}</p>
+  </div>
+  <div class="confirmation-item">
+    <h4>Tickets: </h4>
+    <div class="confirmation-tickets">
+      {{#each this.tickets as |ticket|}}
+        {{#if (gt ticket.qty 0)}}
+          <p>{{ticket.name}}
+            x{{ticket.qty}}
+            ${{ticket.total}}</p>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+  <hr />
+  <div class="confirmation-item highlight yellow">
+    <h4>Total: </h4>
+    <p class="confirmation-total">${{this.totalPurchase}}</p>
+  </div>
 </div>
-<h4>Total: </h4>
-<p class="confirmation-total">${{this.totalPurchase}}</p>

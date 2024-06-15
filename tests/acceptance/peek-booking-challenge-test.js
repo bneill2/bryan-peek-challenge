@@ -89,22 +89,19 @@ module('Acceptance | peek booking challenge', function (hooks) {
 
     assert.strictEqual(currentURL(), '/confirmation');
     assert.dom('h1').hasText('Booking Confirmed!');
-    assert.dom('h4:first-of-type').hasText('Date:');
-    assert.dom('.confirmation-date').hasText(this.availabilityDates[0].date);
-    assert.dom('h4:nth-of-type(2)').hasText('Time:');
+    assert.dom('.confirmation-item:nth-of-type(5) h4').hasText('Date:');
+    assert.dom('.confirmation-date').hasText('07/01/2024');
+    assert.dom('.confirmation-item:nth-of-type(6) h4').hasText('Time:');
     assert
       .dom('.confirmation-time')
       .hasText(this.availabilityDates[0].availabilityTimes[1].time);
-    assert.dom('h4:nth-of-type(3)').hasText('Tickets:');
+    assert.dom('.confirmation-item:nth-of-type(7) h4').hasText('Tickets:');
 
     assert.dom('.confirmation-tickets').exists();
     assert
       .dom('.confirmation-tickets > p:first-child')
-      .hasText(`${this.tickets[0].name} x1 $10`);
-    assert
-      .dom('.confirmation-tickets > p:last-of-type')
-      .hasText(`${this.tickets[1].name} x0 $0`);
-    assert.dom('h4:nth-of-type(4)').hasText('Total:');
-    assert.dom('.confirmation-total').hasText('$10');
+      .hasText(`${this.tickets[0].name} x1 $10.00`);
+    assert.dom('.confirmation-item:nth-of-type(8) h4').hasText('Total:');
+    assert.dom('.confirmation-total').hasText('$10.00');
   });
 });
